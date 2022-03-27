@@ -1,0 +1,50 @@
+<html lang="en">
+	<head>
+		<title>User Home</title>
+		{% include 'header.html' %}
+		{% include 'footer.html' %}
+		{% include 'user_home_navbar.html' %}
+	</head>
+	<body>
+		<div class="col-md-offset-4 col-md-4" style="margin-top:30px">
+			<h3 class="page-header text-primary"><i class="fa fa-users"> Profile</i></h3>
+			<form method="POST" action="/update_profile">
+				{% with messages = get_flashed_messages(with_categories=true) %}
+					{% if messages %}
+						{% for category,message in messages %}
+							<div class="alert alert-{{category}}" role="alert">{{ message }}</div>
+						{% endfor %}
+					{% endif %}
+				{% endwith %}
+					
+				<div class="form-group">
+					<label>Name</label>
+					<input type="text" name="Name" value="{{res.uname}}" class="form-control">
+				</div>
+				<div class="form-group">
+					<label>Age</label>
+					<input type="text" name="Age" value="{{res.age}}" class="form-control">
+				</div>
+				<div class="form-group">
+					<label>Department</label>
+					<input type="text" name="Dept" value="{{res.dept}}" class="form-control">
+				</div>
+				<div class="form-group">
+					<label>R.no</label>
+					<input type="text" name="Rno" value="{{res.rno}}" class="form-control">
+				</div>
+				<div class="form-group">
+					<label>Password</label>
+					<input type="text" name="Pass" value="{{res.upass}}" class="form-control">
+				</div>
+				<div class="form-group">
+					<label>Contact</label>
+					<input type="text" name="Contact" value="{{res.contact}}" class="form-control">
+				</div>
+		        <div class="form-group">
+					<input type="submit" class="btn btn-primary btn-block" value="Update Profile">
+				</div>
+			</form>
+		</div>	
+	</body>
+</html>

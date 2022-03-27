@@ -1,0 +1,103 @@
+<html lang="en">
+	<head>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand"><i class="fa fa-home"> User Home</i></a>
+				</div>
+				<ul class="nav navbar-nav navbar-right" >
+					<li><a href="{{url_for('user_index')}}"><i class="fa fa-user"> Welcome : {{session["uname"]}}</i></a></li>
+					<li><a href="{{url_for('user_profile')}}"><i class="fa fa-user"> Profile</i></a></li>
+					<li><a href="#" data-toggle="modal" data-target="#request"><i class="fa fa-search"> Search Books</i></a></li>
+					<li><a href="{{url_for('logout')}}"><i class="fa fa-sign-out-alt"> Logout </i></a></li>
+				</ul>
+			</div>	
+		</nav>
+	</head>
+	<body>
+		<div class="modal fade" id="request" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="text-primary text-center modal-title"><span class="fa fa-search"> Booking Details</span></h4>
+					</div>
+					<div class="modal-body" style="margin-bottom:30px">
+						<form method="POST" action="">
+							<div class="form-group">
+								<label>Name</label>
+								<input type="text" class="form-control" name="name" autocomplete="off">
+							</div>
+							<div class="form-group">
+								<label>Register No</label>
+								<input type="text" class="form-control" name="register" autocomplete="off">
+							</div>
+							<div class="form-group">
+								<label>Card No</label>
+								<input type="text" class="form-control" name="card" autocomplete="off">
+							</div>
+							<div class="dropdown" style="margin-bottom:20px">
+								<label>Type</label>
+								<select name="type">
+									<option value="Ebooks">Ebooks</option>
+									<option value="AudioBooks">AudioBooks</option>
+									<option value="Comics">Comics</option>
+								</select>
+							</div>
+							<div class="dropdown" style="margin-bottom:20px">
+								<label>Genres</label>
+								<select name="genres">
+									<option value="Engineering">Engineering</option>
+									<option value="History">History</option>
+									<option value="Selfhelp">Selfhelp</option>
+									<option value="Computers and Tech">Computers and Tech</option>
+									<option value="Travel">Travel</option>
+									<option value="Cooking">Cooking</option>
+								</select>
+							</div>
+							<div class="dropdown" style="margin-bottom:20px">
+								<label>Book Name</label>
+								<select name="book">
+									<option value="NDTE">NDTE</option>
+									<option value="Robotics">Robotics</option>
+									<option value="UCMP">UCMP</option>
+									<option value="PPCE">PPCE</option>
+									<option value="PPE">PPE</option>
+									<option value="Mechatronics">Mechatronics</option>
+								</select>
+							</div>
+							<div class="dates">
+								<label>Date</label>
+								<input type="text" name="date" id="user" class="input-group date" placeholder="yyyy-mm-dd">
+								<script>
+									$(function(){
+										$( '.dates #user' ).datepicker({
+											'format':'yyyy-mm-dd',
+											'autoclose':true
+										});
+									});
+								</script>
+							</div>
+							<div class="dates">
+								<label>Return Date</label>
+								<input type="text" name="return" id="user1" class="input-group date" placeholder="yyyy-mm-dd">
+								<script>
+									$(function(){
+										$( '.dates #user1' ).datepicker({
+											'format':'yyyy-mm-dd',
+											'autoclose':true
+										});
+									});
+								</script>
+							</div>
+							<div class="form-group">
+								<input type="submit" class="btn btn-primary pull-right" value="Book now" name="booking">
+								<input type="reset" class="btn btn-danger pull-right" style="margin-right:10px" value="clear">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

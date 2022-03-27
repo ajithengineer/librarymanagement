@@ -1,0 +1,47 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+html{
+	background:#0984e3;
+}
+navbar-inverse{
+	background-color:#154660;
+	border-color:#154660;
+}
+navbar navbar-brand{
+	font-size: 20px;
+	color: white;
+}
+navbar-inverse navbar-nav>li>a {
+	color: white;
+	font-size:18px;
+}
+navbar-inverse navbar-nav>li>a:hover{
+	color: orange;
+	font-size:18px;
+}
+navbar{
+	box-shadow: 1px 1px 5px black;
+}
+table{
+	width:100%;
+	border-collapse:collapse;
+	margin-top:10px;
+}	
+tr td,tr th{
+	border:1px solid #00b894;
+	padding:10px;
+}
+tr th{
+border:none;
+background:#00b894;
+border:1px solid #00b894;
+color:white;
+}
+h3{
+text-align:center;
+color:#6c5ce7;
+}
+
+}

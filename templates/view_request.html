@@ -1,0 +1,46 @@
+<html lang="en">
+	<head>
+		<title>Admin Home</title>
+		{% include 'header.html' %}
+		{% include 'footer.html' %}
+		{% include 'admin_home_navbar.html' %}
+	</head>
+	<body>
+		<div class="col-md-offset-3 col-md-6" style="margin-top:100px">
+			<h3 class="page-header text-primary"><i class="fa fa-request"> Student Requests</i></h3>
+			{% with messages = get_flashed_messages(with_categories=true) %}
+				{% if messages %}
+					{% for category,message in messages %}
+						<div class="alert alert-{{category}}" role="alert">{{ message }}</div>
+					{% endfor %}
+				{% endif %}
+			{% endwith %}
+			<table class="table table-bordered">
+				<tr>
+					<th style="text-align-center">ID</th>
+					<th style="text-align-center">NAME</th>
+					<th style="text-align-center">RNO</th>
+					<th style="text-align-center">CNO</th>
+					<th style="text-align-center">TYPE</th>
+					<th style="text-align-center">GENRES</th>
+					<th style="text-align-center">BOOKNAME</th>
+					<th style="text-align-center">DATE</th>
+					<th style="text-align-center">RTNDATE</th>
+				</tr>
+				{% for data in datas %}
+					<tr>
+						<td>{{data.ID}}</td>
+						<td>{{data.NAME}}</td>
+						<td>{{data.RNO}}</td>
+						<td>{{data.CNO}}</td>
+						<td>{{data.TYPE}}</td>
+						<td>{{data.GENRES}}</td>
+						<td>{{data.BOOKNAME}}</td>
+						<td>{{data.DATE}}</td>
+						<td>{{data.RTNDATE}}</td>
+					</tr>
+				{% endfor %}
+			</table>
+		</div>
+	</body>
+</html>

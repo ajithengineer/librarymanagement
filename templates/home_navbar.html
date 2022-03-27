@@ -1,0 +1,113 @@
+<html lang="en">
+	<head>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+			<div class="navbar-header">
+				<a href="#" class="navbar-brand"><i class="fa fa-database"> Library Management</i></a>
+			</div>
+			<ul class="nav navbar-nav navbar-right" >
+				<li><a href="{{url_for('index')}}"><i class="fa fa-home"> Home</i></a></li>
+				<li><a href="#" data-toggle="modal" data-target="#admin"><i class="fa fa-user"> Admin Login</i></a></li>
+				<li><a href="#" data-toggle="modal" data-target="#register"><i class="fa fa-search"> Registration</i></a></li>
+				<li><a href="#" data-toggle="modal" data-target="#User"><i class="fa fa-search"> User Login</i></a></li>
+			</ul>
+			</div>	
+		</nav>	
+	</head>
+	<body>
+		<div class="modal fade" id="admin" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="text-primary text-center modal-title"><span class="fa fa-user"> Admin Login</span></h4>
+					</div>
+					<div class="modal-body" style="margin-bottom:30px">
+						<form method="POST" action="">
+							<div class="form-group">
+								<label>Admin Name</label>
+								<input type="text" class="form-control" name="aname" autocomplete="off">
+							</div>
+							<div class="form-group">
+								<label>Password</label>
+								<input type="password" class="form-control" name="apass" autocomplete="off">
+							</div>
+							<div class="form-group">
+								<input type="submit" class="btn btn-primary pull-right" value="Login" name="alogin">
+								<input type="reset" class="btn btn-danger pull-right" style="margin-right:10px" value="clear">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="register" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="text-primary text-center modal-title"><span class="fa fa-edit"> Registration</span></h4>
+					</div>
+					<div class="modal-body" style="margin-bottom:30px">
+						<form method="POST" action="">
+							<div class="form-group">
+								<label>Name</label>
+								<input type="text" class="form-control" name="uname" autocomplete="off">
+							</div>
+							<div class="form-group">
+								<label>Age</label>
+								<input type="text" class="form-control" name="age" autocomplete="off">
+							</div>
+							<div class="form-group">
+								<label>Department</label>
+								<input type="text" class="form-control" name="dept" autocomplete="off">
+							</div>
+							<div class="form-group">
+								<label>Register NO</label>
+								<input type="text" class="form-control" name="rno" autocomplete="off">
+							</div>
+							<div class="form-group">
+								<label>Password</label>
+								<input type="password" class="form-control" name="upass" autocomplete="off">
+							</div>
+							<div class="form-group">
+								<label>Contact</label>
+								<input type="text" class="form-control" name="contact" autocomplete="off">
+							</div>
+							<div class="form-group">
+								<input type="submit" class="btn btn-primary pull-right" value="Register" name="register">
+								<input type="reset" class="btn btn-danger pull-right" style="margin-right:10px" value="clear">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="User" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="text-primary text-center modal-title"><span class="fa fa-user"> User Login</span></h4>
+					</div>
+					<div class="modal-body" style="margin-bottom:30px">
+						<form method="POST" action="">
+							<div class="form-group">
+								<label>User Name</label>
+								<input type="text" class="form-control" name="Uname" autocomplete="off">
+							</div>
+							<div class="form-group">
+								<label>Password</label>
+								<input type="password" class="form-control" name="Upass" autocomplete="off">
+							</div>
+							<div class="form-group">
+								<input type="submit" class="btn btn-primary pull-right" value="Login" name="ulogin">
+								<input type="reset" class="btn btn-danger pull-right" style="margin-right:10px" value="clear">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
