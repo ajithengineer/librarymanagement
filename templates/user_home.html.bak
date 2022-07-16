@@ -5,13 +5,13 @@
 		{% include 'header.html' %}
 		{% include 'footer.html' %}
 		{% include 'user_home_navbar.html' %}
+	</head>
+	<body>
 		<style>
 			body{
 				background-image:url('static/source/image/Digital-book.jpg')
 			}
 		</style>
-	</head>
-	<body>
 		<div style="margin-top:60px">
 			<div style="margin-left:100px">
 			<font face="times new roman" size="5"><p>1) Access with your library card code</p></font>
