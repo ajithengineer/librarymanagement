@@ -2,13 +2,13 @@ from flask import Flask,render_template,request,url_for,session,redirect,flash
 from flask_mysqldb import MySQL
 
 app=Flask(__name__)
-app.secret_key="myremote@12"
+app.secret_key="myremotesql@12"
 
 
-app.config['MYSQL_HOST']="remotemysql.com"
-app.config['MYSQL_USER']="7uHI9MM9vC"
-app.config['MYSQL_PASSWORD']="gUZhI4W7rX"
-app.config['MYSQL_DB']="7uHI9MM9vC"
+app.config['MYSQL_HOST']="sql.freedb.tech"
+app.config['MYSQL_USER']="freedb_Ajith DR"
+app.config['MYSQL_PASSWORD']="vHHedeD84cDG5*y"
+app.config['MYSQL_DB']="freedb_Library"
 app.config['MYSQL_CURSORCLASS']="DictCursor"
 mysql =MySQL(app)
 
